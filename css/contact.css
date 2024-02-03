@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+:root{
+    --primary:#47555e;
+    --secondary:#eeeeee;
+    --thirdth:#833AB4;
+    --mist:#b8c0c0;
+    --dark:#19283f
+}
+.formul{
+    margin-top: 170px;
+}
+.titlec{
+    border: 2px solid var(--secondary);
+    border-radius: 10px;
+    font-size: 20px;
+}
+.text{
+    font-size: 25px;
+}
