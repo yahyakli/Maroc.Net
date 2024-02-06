@@ -316,7 +316,7 @@ header{
         color: white;
     }
     50%{
-        color:black;
+        color:rgb(192, 192, 192);
     }
     100%{
         color: white;
