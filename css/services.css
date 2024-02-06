@@ -1,0 +1,56 @@
+:root{
+    --primary:#47555e;
+    --secondary:#eeeeee;
+    --thirdth:gray;
+    --mist:#b8c0c0;
+    --dark:#19283f
+}
+body{
+    background-color: white;
+}
+.top_cont{
+    margin-top: 140px;
+    background-image: url(/prIMG/our_services.jpg);
+    background-size: cover;
+}
+.back{
+    font-size: 16px;
+}
+.back a{
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 800;
+}
+.back a:hover{
+    color: aliceblue;
+}
+.cart{
+    background-color:azure;
+    transition: 0.3s ease;
+    box-shadow: 2px 3px 10px black;
+    height: 350px;
+    position: relative;
+}
+.cart:hover{
+    background-color:rgb(221, 249, 249);
+}
+.text{
+    font-size: 16px;
+}
+.cart_down{
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+}
+.cart_down a{
+    text-decoration: none;
+    background-color: var(--mist);
+    padding: 10px 20px;
+    transition: 0.3s ease;
+}
+.cart_down a:hover{
+    color: white;
+    background-color: var(--primary);
+}

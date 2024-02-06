@@ -26,8 +26,8 @@
         <div class="nav_bar">
             <a href="#"><img src="/prIMG/logo.png" alt=""></a>
             <div class="options">
-                    <a href="/index.html" style="color: #eeeeee;">Home</a>
-                    <a href="#wifi">Wifi Maroc.Net</a>
+                    <a href="/index.html" style="color: #eeeeee;">Accueil</a>
+                    <a href="/services.html">Services</a>
                     <a href="/contact.html">Contactez-nous</a>
                     <a href="/A propos.html">À propos de nous</a>
             </div>
@@ -35,9 +35,11 @@
                 <label for="input"></label>
                 <input type="text" placeholder="search" maxlength="20" id="input" list="choice_list">
                 <datalist id="choice_list">
+                    <option value="fibre"></option>
                     <option value="forfaits"></option>
                     <option value="wifi"></option>
                     <option value="smartphone"></option>
+                    <option value="services"></option>
                     <option value="contact"></option>
                     <option value="a propos"></option>
                 </datalist>
@@ -45,11 +47,11 @@
             </form>
         </div>
     </header>
-    <button id="to_top"><a href="#"><i class="fa-solid fa-arrow-up"></i></a></button>
+    <button id="to_top" class="to_top"><a href="#"><i class="fa-solid fa-arrow-up-long"></i></a></button>
     <div class="cont" id="cont">
         <div class="hidden_section">
-            <a href="/index.html" style="color: #eeeeee;">Home</a>
-            <a href="#wifi">Wifi Maroc.Net</a>
+            <a href="/index.html" style="color: #eeeeee;">Accueil</a>
+            <a href="/services.html">Services</a>
             <a href="/contact.html">Contactez-nous</a>
             <a href="/A propos.html">À propos de nous</a>
         </div>
@@ -73,6 +75,51 @@
             </div>
         </div>
     </div>
+    <div class="fibre" id="fibre">
+        <div class="titlefb">
+            <h1>La fibre de <span>Maroc.Net</span></h1>
+        </div>
+        <div class="offres">
+            <div class="offre">
+                <div class="of_top">
+                    <div class="mg">
+                        <h1>500 Méga</h1>
+                    </div>
+                    <div class="prix">
+                        <h1>499 <span style="font-size: 18px;">Dh/mois</span></h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="of_down">
+                    <h1><i class="fa-regular fa-circle-check icon"></i>Jusqu'à <span><i class="fa-solid fa-arrow-down-long"></i>500Mbit/s<i class="fa-solid fa-arrow-up-long"></i>500Mbit/s</span></h1>
+                    <h1><i class="fa-regular fa-circle-check icon"></i>Les appels <span>illimités</span></h1>
+                    <h1><i class="fa-solid fa-screwdriver-wrench icon"></i>Installation à <span>99Dh</span></h1>
+                </div>
+                <div style="text-align: center;">
+                    <a href="/contact.html">J'en profite</a>
+                </div>
+            </div>
+            <div class="offre">
+                <div class="of_top">
+                    <div class="mg">
+                        <h1>1 Géga</h1>
+                    </div>
+                    <div class="prix">
+                        <h1>799 <span style="font-size: 18px;">Dh/mois</span></h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="of_down">
+                    <h1><i class="fa-regular fa-circle-check icon"></i>Jusqu'à <span><i class="fa-solid fa-arrow-down-long"></i>1Gbit/s<i class="fa-solid fa-arrow-up-long"></i>1Gbit/s</span></h1>
+                    <h1><i class="fa-regular fa-circle-check icon"></i>Les appels <span>illimités</span></h1>
+                    <h1><i class="fa-solid fa-screwdriver-wrench icon"></i>Installation à <span>0Dh</span></h1>
+                </div>
+                <div style="text-align: center;">
+                    <a href="contact.html">J'en profite</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="forfait" id="forfait">
         <div class="titleF">
             <h1 id="titleF">Les forfait de <span>Maroc.Net</span></h1>
@@ -87,9 +134,9 @@
                     <hr>
                     <div class="down">
                         <h1><i class="fa-solid fa-globe"></i>10 GO</h1>
-                        <h6><i class="fa-solid fa-phone"></i>5H d'appels</h5>
-                        <h6><i class="fa-solid fa-infinity"></i>illimites vers Maroc.Net</h5>
-                        <h2><a href="/contact.html">Acheter</a></h2>
+                        <h6><i class="fa-solid fa-phone"></i>5H d'appels</h6>
+                        <h6><i class="fa-solid fa-infinity"></i>illimites vers Maroc.Net</h6>
+                        <h2><a href="/contact.html">Choisir</a></h2>
                     </div>
                 </div>
                 <div class="cardF">
@@ -100,9 +147,9 @@
                     <hr>
                     <div class="down">
                         <h1><i class="fa-solid fa-globe"></i>20 GO</h1>
-                        <h6><i class="fa-solid fa-phone"></i>1H d'appels</h5>
-                        <h6><i class="fa-solid fa-infinity"></i>illimites vers Maroc.Net</h5>
-                        <h2><a href="/contact.html">Acheter</a></h2>
+                        <h6><i class="fa-solid fa-phone"></i>1H d'appels</h6>
+                        <h6><i class="fa-solid fa-infinity"></i>illimites vers Maroc.Net</h6>
+                        <h2><a href="/contact.html">Choisir</a></h2>
                     </div>
                 </div>
                 <div class="cardF">
@@ -113,9 +160,9 @@
                     <hr>
                     <div class="down">
                         <h1><i class="fa-solid fa-globe"></i>1 GO</h1>
-                        <h6><i class="fa-solid fa-phone"></i>30H d'appels</h5>
-                        <h6><i class="fa-solid fa-infinity"></i>illimites vers Maroc.Net</h5>
-                        <h2><a href="/contact.html">Acheter</a></h2>
+                        <h6><i class="fa-solid fa-phone"></i>30H d'appels</h6>
+                        <h6><i class="fa-solid fa-infinity"></i>illimites vers Maroc.Net</h6>
+                        <h2><a href="/contact.html">Choisir</a></h2>
                     </div>
                 </div>
                 <div class="cardF">
@@ -126,9 +173,9 @@
                     <hr>
                     <div class="down">
                         <h1><i class="fa-solid fa-globe"></i>15 GO</h1>
-                        <h6><i class="fa-solid fa-phone"></i>20H d'appels</h5>
-                        <h6><i class="fa-solid fa-infinity"></i>illimites vers Maroc.Net</h5>
-                        <h2><a href="/contact.html">Acheter</a></h2>
+                        <h6><i class="fa-solid fa-phone"></i>20H d'appels</h6>
+                        <h6><i class="fa-solid fa-infinity"></i>illimites vers Maroc.Net</h6>
+                        <h2><a href="/contact.html">Choisir</a></h2>
                     </div>
                 </div>
             </div>
@@ -147,10 +194,10 @@
                     </div>
                     <hr>
                     <div class="down">
-                        <h1><i class="fa-solid fa-gauge-high"></i>50Mo</h1>
-                        <h6><i class="fa-solid fa-infinity"></i>Les appels illimitées</h5>
-                        <h6><i class="fa-solid fa-file-invoice-dollar"></i>Installation gratuite</h5>
-                        <h2><a href="/contact.html">Acheter</a></h2>
+                        <h1><i class="fa-solid fa-gauge-high"></i>20Mo</h1>
+                        <h6><i class="fa-solid fa-infinity"></i>Les appels illimitées</h6>
+                        <h6><i class="fa-solid fa-file-invoice-dollar"></i>Installation gratuite</h6>
+                        <h2><a href="/contact.html">Choisir</a></h2>
                     </div>
                 </div>
                 <div class="cardW">
@@ -160,10 +207,10 @@
                     </div>
                     <hr>
                     <div class="down">
-                        <h1><i class="fa-solid fa-gauge-high"></i>100Mo</h1>
-                        <h6><i class="fa-solid fa-infinity"></i>Les appels illimitées</h5>
-                        <h6><i class="fa-solid fa-file-invoice-dollar"></i>Installation gratuite</h5>
-                        <h2><a href="/contact.html">Acheter</a></h2>
+                        <h1><i class="fa-solid fa-gauge-high"></i>50Mo</h1>
+                        <h6><i class="fa-solid fa-infinity"></i>Les appels illimitées</h6>
+                        <h6><i class="fa-solid fa-file-invoice-dollar"></i>Installation gratuite</h6>
+                        <h2><a href="/contact.html">Choisir</a></h2>
                     </div>
                 </div>
                 <div class="cardW">
@@ -173,24 +220,24 @@
                     </div>
                     <hr>
                     <div class="down">
-                        <h1><i class="fa-solid fa-gauge-high"></i>200Mo</h1>
-                        <h6><i class="fa-solid fa-infinity"></i>Les appels illimitées</h5>
-                            <h6><i class="fa-solid fa-file-invoice-dollar"></i>Installation gratuite</h5>
-                        <h2><a href="contact.html">Acheter</a></h2>
+                        <h1><i class="fa-solid fa-gauge-high"></i>100Mo</h1>
+                        <h6><i class="fa-solid fa-infinity"></i>Les appels illimitées</h6>
+                        <h6><i class="fa-solid fa-file-invoice-dollar"></i>Installation gratuite</h6>
+                        <h2><a href="contact.html">Choisir</a></h2>
                     </div>
                 </div>
                 <div class="cardW">
                     <div class="top">
-                        <p>499<span>Dh/mois</span></p>
+                        <p>349<span>Dh/mois</span></p>
                         <small>Sans engagement</small>
                         <h3 class="limite">Offre limitée</h3>
                     </div>
                     <hr>
                     <div class="down">
-                        <h1><i class="fa-solid fa-gauge-high"></i>1Go/s</h1>
-                        <h6><i class="fa-solid fa-infinity"></i>Les appels illimitées</h5>
-                        <h6><i class="fa-solid fa-file-invoice-dollar"></i>Installation gratuite</h5>
-                        <h2><a href="/contact.html">Acheter</a></h2>
+                        <h1><i class="fa-solid fa-gauge-high"></i>200Mo/s</h1>
+                        <h6><i class="fa-solid fa-infinity"></i>Les appels illimitées</h6>
+                        <h6><i class="fa-solid fa-file-invoice-dollar"></i>Installation gratuite</h6>
+                        <h2><a href="/contact.html">Choisir</a></h2>
                     </div>
                 </div>
             </div>
@@ -263,7 +310,8 @@
                             <li><span>MP</span><i class="fa-solid fa-camera ico"></i></li>
                         </ul>
                     </div>
-                    <h2>2099 <span>Dh</span></h2>
+                    <h2>1999 <span>Dh</span></h2>
+                    <h4 style="text-decoration: line-through; color: red;">2500 Dh</h4>
                 </div>
             </div>
             <div class="al_cont">
@@ -271,11 +319,11 @@
                     <i style="margin-right: 10px; font-size:20px ; color: #4267B2;" class="fa-solid fa-triangle-exclamation"></i>
                     <h1 style="color: #FF0000;">Alerte</h1>
                 </div>
-                <h2 class="message" style="margin-left: 20px; font-size: 18px;">Pour découvrir plus de surprises ou si vous souhaitez acheter l'un de nos téléphones, visitez <a href="/contact.html">notre agence</a></h2>
+                <h2 class="message" style="margin-left: 20px; font-size: 18px;">Pour découvrir plus de surprises ou si vous souhaitez acheter l'un de nos téléphones, visitez <a href="/contact.html">notre agence.</a></h2>
             </div>
         </div>
     </div>
-    <div style="box-sizing: border-box; padding: 0 60px; background-color:#833AB4; box-shadow: 5px -5px 20px black;">
+    <div style="box-sizing: border-box; padding: 0 60px; background-color:#833AB4; box-shadow: 2px -2px 20px black;">
         <div class="footer" >
             <div class="footer_">
                 <h2>Adresse</h2>
@@ -292,7 +340,7 @@
                 <ul>
                     <li class="li_h"><i class="fa-solid fa-chevron-right"></i><a href="#forfait">Forfait</a></li>
                     <li class="li_h"><i class="fa-solid fa-chevron-right"></i><a href="#wifi">Wi-Fi</a></li>
-                    <li class="li_h"><i class="fa-solid fa-chevron-right"></i><a href="">La fibre de Maroc.Net</a></li>
+                    <li class="li_h"><i class="fa-solid fa-chevron-right"></i><a href="#fibre">La fibre de Maroc.Net</a></li>
                     <li class="li_h"><i class="fa-solid fa-chevron-right"></i><a href="">Réparation</a></li>
                     <li class="li_h"><i class="fa-solid fa-chevron-right"></i><a href="#NetPhone">Smartphone</a></li>
                 </ul>
@@ -300,6 +348,7 @@
             <div class="footer_">
                 <h2>Lins rapides</h2>
                 <ul>
+                    <li class="li_h"><i class="fa-solid fa-chevron-right"></i><a href="/index.html">Accueil</a></li>
                     <li class="li_h"><i class="fa-solid fa-chevron-right"></i><a href="/contact.html">Contactez-nous</a></li>
                     <li class="li_h"><i class="fa-solid fa-chevron-right"></i><a href="/A propos.html">À propos de nous</a></li>
                     <li class="li_h"><i class="fa-solid fa-chevron-right"></i><a href="">Services</a></li>

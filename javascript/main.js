@@ -1,10 +1,21 @@
+let row_up = document.querySelectorAll(".to_top");
+window.onscroll = function () {
+    if (this.scrollY >= 500) {
+        row_up.forEach(element => {
+            element.classList.add("show");
+        });
+    }else {
+        row_up.forEach(element => {
+            element.classList.remove("show");
+        });
+    }
+}
 /////////////////////////////////////////////////////////////////
 document.getElementById("search_button").onclick = function () {
     const inputElement = document.getElementById("input");
     if (inputElement.classList.contains("show-out") === true) {
         inputElement.classList.remove("show-out");
         inputElement.classList.add("show-in");
-        // had lpartie dyal click on button search
     } else if (inputElement.classList.contains("show-in") === true){
         inputsearch();
     } else {
@@ -40,6 +51,13 @@ document.getElementById("NetPhone").onclick = function (){
         inputElement.classList.add("show-out")
     }
 }
+document.getElementById("fibre").onclick = function (){
+    const inputElement = document.getElementById("input");
+    if (inputElement.classList.contains("show-in") === true) {
+        inputElement.classList.remove("show-in")
+        inputElement.classList.add("show-out")
+    }
+}
 ///////////////////////////////////////////////////////////
 function inputsearch() {
     let input = document.getElementById('input');
@@ -56,5 +74,9 @@ function inputsearch() {
         window.location.href = '/contact.html'
     } else if (selectedOption === 'a propos'){
         window.location.href = '/A propos.html'
+    }else if(selectedOption === 'services'){
+        window.location.href = '/services.html'
+    }else if(selectedOption === 'fibre'){
+        window.location.href = '/index.html#fibre'
     }
 }
