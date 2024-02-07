@@ -27,6 +27,10 @@
     opacity: 0;
     display: none;
 }
+@font-face {
+    font-family: Roboto;
+    src: url(/css/Roboto/Roboto-Regular.ttf) format('truetype');
+}
 body{
     font-family: 'Roboto', sans-serif;
     height: 100vh;
@@ -205,7 +209,7 @@ header{
     transform: scale(1.05);
 }
 .title{
-    width: 230px;
+    width: fit-content;
     margin-left: 10%;
     margin-right: auto;
     padding-top: 2em;
@@ -271,7 +275,10 @@ header{
     width: 60%;
 }
 .card a:hover small{
-    color: blue;
+    color: var(--secondary);
+    background-color: var(--primary);
+    border-radius: 2px;
+    padding: 1px 3px;
 }
 .fibre{
     width: 100%;
@@ -297,11 +304,15 @@ header{
     flex-wrap: wrap;
 }
 .offre{
-    background-color: var(--thirdth);
+    background-color: var(--primary);
     box-sizing: border-box;
     padding: 0px 30px;
     width: 400px;
     margin: 40px 20px;
+    transition: 0.5s ease;
+}
+.offre:hover{
+    background-color:var(--dark);
 }
 .offre span{
     color:var(--mist);
@@ -363,7 +374,7 @@ header{
     padding-bottom: 70px;
 }
 .titleF{
-    width: 270px;
+    width: fit-content;
     margin-left: 10%;
     margin-right: auto;
 }
@@ -424,7 +435,7 @@ header{
 }
 .down i{
     margin-right: 10px;
-    color:blue;
+    color:#59B4C3;
 }
 .down h1,.down h6{
     margin-top: 20px;
@@ -462,7 +473,7 @@ header{
     background-color: var(--secondary);
 }
 .titleW{
-    width: 324px;
+    width: fit-content;
     margin-left: 10%;
     margin-right: auto;
     margin-bottom: 30px;
@@ -527,7 +538,7 @@ header{
     padding-bottom: 100px;
 }
 .titleN{
-    width: 400px;
+    width: fit-content;
     margin-left: 10%;
     margin-right: auto;
     margin-bottom: 30px;
@@ -535,6 +546,8 @@ header{
 .titleN span{
     color: var(--secondary);
     cursor:pointer;
+    background-color: var(--primary);
+    padding: 5px 10px;
 }
 .titleN h1{
     color: black;
@@ -718,6 +731,10 @@ header{
         text-align: center;
         margin-left: auto;
     }
+    .titleN{
+        text-align: center;
+        margin-left: auto;
+    }
     .cards{
         flex-direction: row;
         flex-wrap: wrap;
@@ -855,9 +872,6 @@ header{
     .offersN .card{
         margin-left: 20px;
         margin-bottom: 40px;
-    }
-    .titleN{
-        width: 200px;
     }
     .date{
         display: none;
