@@ -14,7 +14,7 @@
     width: 0.7em;
 }
 ::-webkit-scrollbar-track{
-    background-color: var(--primary);
+    background-color:var(--primary) ;
 }
 ::-webkit-scrollbar-thumb{
     background-color: var(--secondary);
@@ -634,7 +634,7 @@ header{
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color:#833AB4;
+    background-color:var(--primary);
     color: white;
     align-items: first baseline;
     padding: 70px 0 30px;

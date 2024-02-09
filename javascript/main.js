@@ -58,6 +58,13 @@ document.getElementById("fibre").onclick = function (){
         inputElement.classList.add("show-out")
     }
 }
+document.getElementById("footer").onclick = function (){
+    const inputElement = document.getElementById("input");
+    if (inputElement.classList.contains("show-in") === true) {
+        inputElement.classList.remove("show-in")
+        inputElement.classList.add("show-out")
+    }
+}
 ///////////////////////////////////////////////////////////
 function inputsearch() {
     let input = document.getElementById('input');
