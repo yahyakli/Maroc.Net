@@ -203,7 +203,7 @@ header{
 }
 #to_top a{
     font-size: 20px;
-    color: blue;
+    color: #59B4C3;
 }
 #to_top:hover{
     transform: scale(1.05);
@@ -587,7 +587,7 @@ header{
     color: var(--dark);
 }
 .offersN span{
-    color: blue;
+    color: #59B4C3;
 }
 .config{
     margin-top: 20px;
@@ -617,7 +617,7 @@ header{
 }
 .message a{
     text-decoration: none;
-    color: blue;
+    color: #59B4C3;
 }
 .message a:hover{
     color: blueviolet;
