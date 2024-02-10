@@ -114,6 +114,12 @@ header{
     border-radius: 10px 10px;
     box-sizing: border-box;
     padding-left: 10px;
+    transition: 0.5s ease;
+}
+#input:focus{
+    background-color:var(--secondary);
+    border: none;
+    outline: none;
 }
 .show-in {
     animation-name: showin;
