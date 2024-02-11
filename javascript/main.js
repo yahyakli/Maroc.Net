@@ -1,3 +1,9 @@
+let menu = document.getElementById("menu_btn");
+menu.onclick = function(){
+    let menu_cont = document.getElementById("menu_cont");
+    menu_cont.classList.toggle("put_in");
+}
+/////////////////////////////////////////////////////////////
 let row_up = document.querySelectorAll(".to_top");
 window.onscroll = function () {
     if (this.scrollY >= 500) {
@@ -87,3 +93,4 @@ function inputsearch() {
         window.location.href = '/index.html#fibre'
     }
 }
+///////////////////////////////////////////////////////
