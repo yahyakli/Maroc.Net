@@ -183,7 +183,7 @@ header{
     z-index: 100;
     top: 100px;
     right: 0;
-    background-color: var(--primary);
+    background-color:#212f38 ;
     transition: 0.5s ease;
 }
 .menu_cont.put_in{

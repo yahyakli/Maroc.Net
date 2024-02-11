@@ -32,43 +32,44 @@ document.getElementById("search_button").onclick = function () {
 document.getElementById("cont").onclick = function (){
     const inputElement = document.getElementById("input");
     if (inputElement.classList.contains("show-in") === true) {
-        inputElement.classList.remove("show-in")
-        inputElement.classList.add("show-out")
+        inputElement.classList.remove("show-in");
+        inputElement.classList.add("show-out");
+        menu_cont.classList.remove("put_in");
     }
 }
 document.getElementById("forfait").onclick = function (){
     const inputElement = document.getElementById("input");
     if (inputElement.classList.contains("show-in") === true) {
-        inputElement.classList.remove("show-in")
-        inputElement.classList.add("show-out")
+        inputElement.classList.remove("show-in");
+        inputElement.classList.add("show-out");
     }
 }
 document.getElementById("wifi").onclick = function (){
     const inputElement = document.getElementById("input");
     if (inputElement.classList.contains("show-in") === true) {
-        inputElement.classList.remove("show-in")
-        inputElement.classList.add("show-out")
+        inputElement.classList.remove("show-in");
+        inputElement.classList.add("show-out");
     }
 }
 document.getElementById("NetPhone").onclick = function (){
     const inputElement = document.getElementById("input");
     if (inputElement.classList.contains("show-in") === true) {
-        inputElement.classList.remove("show-in")
-        inputElement.classList.add("show-out")
+        inputElement.classList.remove("show-in");
+        inputElement.classList.add("show-out");
     }
 }
 document.getElementById("fibre").onclick = function (){
     const inputElement = document.getElementById("input");
     if (inputElement.classList.contains("show-in") === true) {
-        inputElement.classList.remove("show-in")
-        inputElement.classList.add("show-out")
+        inputElement.classList.remove("show-in");
+        inputElement.classList.add("show-out");
     }
 }
 document.getElementById("footer").onclick = function (){
     const inputElement = document.getElementById("input");
     if (inputElement.classList.contains("show-in") === true) {
-        inputElement.classList.remove("show-in")
-        inputElement.classList.add("show-out")
+        inputElement.classList.remove("show-in");
+        inputElement.classList.add("show-out");
     }
 }
 ///////////////////////////////////////////////////////////
