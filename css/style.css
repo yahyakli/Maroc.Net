@@ -225,15 +225,14 @@ header{
     width: 40px;
     z-index: 99;
     bottom: 40px;
-    right: 40px;
+    right: -40px;
     border: none;
     border-radius: 50%;
     box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.29);
     transition: 0.3s ease-out;
-    opacity: 0;
 }
 #to_top.show {
-    opacity: 1;
+    right: 40px;
 }
 #to_top a{
     font-size: 20px;
