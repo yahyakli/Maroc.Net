@@ -85,13 +85,13 @@ function inputsearch() {
     }else if (selectedOption === 'smartphone'){
         window.location.href = '#NetPhone'
     }else if (selectedOption === 'contact'){
-        window.location.href = '/contact.html'
+        window.location.href = 'contact.html'
     } else if (selectedOption === 'a propos'){
-        window.location.href = '/A propos.html'
+        window.location.href = 'A propos.html'
     }else if(selectedOption === 'services'){
-        window.location.href = '/services.html'
+        window.location.href = 'services.html'
     }else if(selectedOption === 'fibre'){
-        window.location.href = '/index.html#fibre'
+        window.location.href = 'index.html#fibre'
     }
 }
 ///////////////////////////////////////////////////////
