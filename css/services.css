@@ -11,7 +11,7 @@ body{
 }
 .top_cont{
     margin-top: 100px;
-    background-image: url(prIMG/our_services.jpg);
+    background-image: url(../prIMG/our_services.jpg);
     background-size: cover;
 }
 .back{
