@@ -29,49 +29,16 @@ document.getElementById("search_button").onclick = function () {
     }
 }
 /////////////////////////////////////////////////////////////
-document.getElementById("cont").onclick = function (){
-    const inputElement = document.getElementById("input");
-    if (inputElement.classList.contains("show-in") === true) {
-        inputElement.classList.remove("show-in");
-        inputElement.classList.add("show-out");
-        menu_cont.classList.remove("put_in");
-    }
-}
-document.getElementById("forfait").onclick = function (){
-    const inputElement = document.getElementById("input");
-    if (inputElement.classList.contains("show-in") === true) {
+const inputElement = document.getElementById("input");
+const btn = document.getElementById("search_button")
+document.addEventListener("click", function(e) {
+    const isClickInsidePopUp = inputElement.contains(e.target);
+    const isClickInsideAdd = btn.contains(e.target);
+    if (!isClickInsidePopUp && !isClickInsideAdd) {
         inputElement.classList.remove("show-in");
         inputElement.classList.add("show-out");
     }
-}
-document.getElementById("wifi").onclick = function (){
-    const inputElement = document.getElementById("input");
-    if (inputElement.classList.contains("show-in") === true) {
-        inputElement.classList.remove("show-in");
-        inputElement.classList.add("show-out");
-    }
-}
-document.getElementById("NetPhone").onclick = function (){
-    const inputElement = document.getElementById("input");
-    if (inputElement.classList.contains("show-in") === true) {
-        inputElement.classList.remove("show-in");
-        inputElement.classList.add("show-out");
-    }
-}
-document.getElementById("fibre").onclick = function (){
-    const inputElement = document.getElementById("input");
-    if (inputElement.classList.contains("show-in") === true) {
-        inputElement.classList.remove("show-in");
-        inputElement.classList.add("show-out");
-    }
-}
-document.getElementById("footer").onclick = function (){
-    const inputElement = document.getElementById("input");
-    if (inputElement.classList.contains("show-in") === true) {
-        inputElement.classList.remove("show-in");
-        inputElement.classList.add("show-out");
-    }
-}
+});
 ///////////////////////////////////////////////////////////
 function inputsearch() {
     let input = document.getElementById('input');
@@ -79,19 +46,21 @@ function inputsearch() {
     input.classList.remove("show-in");
     input.classList.add("show-out");
     if (selectedOption === 'forfaits') {
-        window.location.href = '#forfait';
+        window.location.href = 'index.php#forfait';
     }else if(selectedOption === 'wifi') {
-        window.location.href = '#wifi'
+        window.location.href = 'index.php#wifi'
     }else if (selectedOption === 'smartphone'){
-        window.location.href = '#NetPhone'
+        window.location.href = 'index.php#NetPhone'
     }else if (selectedOption === 'contact'){
-        window.location.href = 'contact.html'
+        window.location.href = 'contact.php'
     } else if (selectedOption === 'a propos'){
-        window.location.href = 'A propos.html'
+        window.location.href = 'A propos.php'
     }else if(selectedOption === 'services'){
-        window.location.href = 'services.html'
+        window.location.href = 'services.php'
     }else if(selectedOption === 'fibre'){
-        window.location.href = 'index.html#fibre'
+        window.location.href = 'index.php#fibre'
+    }else if(selectedOption === 'home'){
+        window.location.href = 'index.php'
     }
 }
 ///////////////////////////////////////////////////////

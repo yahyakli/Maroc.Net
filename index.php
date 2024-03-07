@@ -4,56 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon"  href="prIMG/favicon.png">
-    <title>Maroc.Net-Mohammedia</title>
+    <title>Maroc.Net-Accueil</title>
     <link rel="stylesheet" href="fontawesome-free-6.5.1-web/css/all.min.css">
     <link rel="stylesheet" href="fontawesome-free-6.5.1-web/css/fontawesome.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="top_section">
-            <div class="localisation">
-                <i class="fa-solid fa-location-dot"></i>
-                <small>Kadi Tazi, Mohammedia, Casablanca-Settat, Maroc</small>
-            </div>
-            <div class="date">
-                <i class="fa-regular fa-clock"></i>
-                <small>Lun-Ven/9-21</small>
-            </div>
-        </div>
-        <div class="nav_bar">
-            <a href="#"><img src="prIMG/logo.png" alt=""></a>
-            <div class="options">
-                    <a href="index.html" style="color: #eeeeee;">Accueil</a>
-                    <a href="services.html">Services</a>
-                    <a href="contact.html">Contactez-nous</a>
-                    <a href="A propos.html">À propos de nous</a>
-            </div>
-            <form onsubmit="inputsearch()">
-                <label for="input"></label>
-                <input type="text" placeholder="search" maxlength="20" id="input" list="choice_list">
-                <datalist id="choice_list">
-                    <option value="fibre"></option>
-                    <option value="forfaits"></option>
-                    <option value="wifi"></option>
-                    <option value="smartphone"></option>
-                    <option value="services"></option>
-                    <option value="contact"></option>
-                    <option value="a propos"></option>
-                </datalist>
-                <i class="fa-solid fa-magnifying-glass" id="search_button"></i>
-                <div class="menu">
-                    <i id="menu_btn" class="fa-solid fa-bars"></i>
-                </div>
-            </form>
-        </div>  
-    </header>
+    <?php include('./components/header.php')?>
     <div id="menu_cont" class="menu_cont">
         <ul class="menu_links">
-            <li><a href="index.html" style="color: #eeeeee;">Accueil</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contactez-nous</a></li>
-            <li><a href="A propos.html">À propos de nous</a></li>
+            <li><a href="index.php" style="color: #eeeeee;">Accueil</a></li>
+            <li><a href="services.php">Services</a></li>
+            <li><a href="contact.php">Contactez-nous</a></li>
+            <li><a href="A propos.php">À propos de nous</a></li>
         </ul>
     </div>
     <button id="to_top" class="to_top"><a href="#"><i class="fa-solid fa-arrow-up-long"></i></a></button>
@@ -99,7 +62,7 @@
                     <h1><i class="fa-solid fa-screwdriver-wrench icon"></i>Installation à <span>99Dh</span></h1>
                 </div>
                 <div style="text-align: center;">
-                    <a href="contact.html">J'en profite</a>
+                    <a href="contact.php">J'en profite</a>
                 </div>
             </div>
             <div class="offre">
@@ -118,7 +81,7 @@
                     <h1><i class="fa-solid fa-screwdriver-wrench icon"></i>Installation à <span>0Dh</span></h1>
                 </div>
                 <div style="text-align: center;">
-                    <a href="contact.html">J'en profite</a>
+                    <a href="contact.php">J'en profite</a>
                 </div>
             </div>
         </div>
@@ -139,7 +102,7 @@
                         <h1><i class="fa-solid fa-globe"></i>10 GO</h1>
                         <h6><i class="fa-solid fa-phone"></i>5H d'appels</h6>
                         <h6><i class="fa-solid fa-infinity"></i>illimites vers Maroc.Net</h6>
-                        <h2><a href="contact.html">Choisir</a></h2>
+                        <h2><a href="contact.php">Choisir</a></h2>
                     </div>
                 </div>
                 <div class="cardF">
@@ -152,7 +115,7 @@
                         <h1><i class="fa-solid fa-globe"></i>20 GO</h1>
                         <h6><i class="fa-solid fa-phone"></i>1H d'appels</h6>
                         <h6><i class="fa-solid fa-infinity"></i>illimites vers Maroc.Net</h6>
-                        <h2><a href="contact.html">Choisir</a></h2>
+                        <h2><a href="contact.php">Choisir</a></h2>
                     </div>
                 </div>
                 <div class="cardF">
@@ -165,7 +128,7 @@
                         <h1><i class="fa-solid fa-globe"></i>1 GO</h1>
                         <h6><i class="fa-solid fa-phone"></i>30H d'appels</h6>
                         <h6><i class="fa-solid fa-infinity"></i>illimites vers Maroc.Net</h6>
-                        <h2><a href="contact.html">Choisir</a></h2>
+                        <h2><a href="contact.php">Choisir</a></h2>
                     </div>
                 </div>
                 <div class="cardF">
@@ -178,7 +141,7 @@
                         <h1><i class="fa-solid fa-globe"></i>15 GO</h1>
                         <h6><i class="fa-solid fa-phone"></i>20H d'appels</h6>
                         <h6><i class="fa-solid fa-infinity"></i>illimites vers Maroc.Net</h6>
-                        <h2><a href="contact.html">Choisir</a></h2>
+                        <h2><a href="contact.php">Choisir</a></h2>
                     </div>
                 </div>
             </div>
@@ -200,7 +163,7 @@
                         <h1><i class="fa-solid fa-gauge-high"></i>20Mo</h1>
                         <h6><i class="fa-solid fa-infinity"></i>Les appels illimitées</h6>
                         <h6><i class="fa-solid fa-file-invoice-dollar"></i>Installation gratuite</h6>
-                        <h2><a href="contact.html">Choisir</a></h2>
+                        <h2><a href="contact.php">Choisir</a></h2>
                     </div>
                 </div>
                 <div class="cardW">
@@ -213,7 +176,7 @@
                         <h1><i class="fa-solid fa-gauge-high"></i>50Mo</h1>
                         <h6><i class="fa-solid fa-infinity"></i>Les appels illimitées</h6>
                         <h6><i class="fa-solid fa-file-invoice-dollar"></i>Installation gratuite</h6>
-                        <h2><a href="contact.html">Choisir</a></h2>
+                        <h2><a href="contact.php">Choisir</a></h2>
                     </div>
                 </div>
                 <div class="cardW">
@@ -226,7 +189,7 @@
                         <h1><i class="fa-solid fa-gauge-high"></i>100Mo</h1>
                         <h6><i class="fa-solid fa-infinity"></i>Les appels illimitées</h6>
                         <h6><i class="fa-solid fa-file-invoice-dollar"></i>Installation gratuite</h6>
-                        <h2><a href="contact.html">Choisir</a></h2>
+                        <h2><a href="contact.php">Choisir</a></h2>
                     </div>
                 </div>
                 <div class="cardW">
@@ -240,7 +203,7 @@
                         <h1><i class="fa-solid fa-gauge-high"></i>200Mo/s</h1>
                         <h6><i class="fa-solid fa-infinity"></i>Les appels illimitées</h6>
                         <h6><i class="fa-solid fa-file-invoice-dollar"></i>Installation gratuite</h6>
-                        <h2><a href="contact.html">Choisir</a></h2>
+                        <h2><a href="contact.php">Choisir</a></h2>
                     </div>
                 </div>
             </div>
@@ -322,68 +285,11 @@
                     <i style="margin-right: 10px; font-size:20px ; color: #4267B2;" class="fa-solid fa-triangle-exclamation"></i>
                     <h1 style="color: #FF0000;">Alerte</h1>
                 </div>
-                <h2 class="message" style="margin-left: 20px; font-size: 18px;">Pour découvrir plus de surprises ou si vous souhaitez acheter l'un de nos téléphones, visitez <a href="/contact.html">notre agence.</a></h2>
+                <h2 class="message" style="margin-left: 20px; font-size: 18px;">Pour découvrir plus de surprises ou si vous souhaitez acheter l'un de nos téléphones, visitez <a href="/contact.php">notre agence.</a></h2>
             </div>
         </div>
     </div>
-    <div style="box-sizing: border-box; padding: 0 60px; background-color:#47555e; box-shadow: 2px -2px 20px black;" id="footer">
-        <div class="footer" >
-            <div class="footer_">
-                <h2>Adresse</h2>
-                <div class="footer_cont">
-                    <ul>
-                        <li style="display: flex; align-items: center;"><i style="margin-right: 10px;" class="fa-solid fa-location-dot"></i>Kadi Tazi, Mohammedia, Casablanca-Settat, Maroc</li>
-                        <li style="display: flex; align-items: center;"><i style="margin-right: 10px;" class="fa-solid fa-phone"></i>+212 543976232</li>
-                        <li style="display: flex; align-items: center;"><i style="margin-right: 10px;" class="fa-solid fa-envelope"></i>Maroc.Net@gmail.com</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer_">
-                <h2>Services</h2>
-                <ul>
-                    <li class="li_h"><i class="fa-solid fa-chevron-right"></i><a href="#forfait">Forfait</a></li>
-                    <li class="li_h"><i class="fa-solid fa-chevron-right"></i><a href="#wifi">Wi-Fi</a></li>
-                    <li class="li_h"><i class="fa-solid fa-chevron-right"></i><a href="#fibre">La fibre de Maroc.Net</a></li>
-                    <li class="li_h"><i class="fa-solid fa-chevron-right"></i><a href="services.html#reparation">Réparation</a></li>
-                    <li class="li_h"><i class="fa-solid fa-chevron-right"></i><a href="#NetPhone">Smartphone</a></li>
-                </ul>
-            </div>
-            <div class="footer_">
-                <h2>Liens rapides</h2>
-                <ul>
-                    <li class="li_h"><i class="fa-solid fa-chevron-right"></i><a href="index.html">Accueil</a></li>
-                    <li class="li_h"><i class="fa-solid fa-chevron-right"></i><a href="services.html">Services</a></li>
-                    <li class="li_h"><i class="fa-solid fa-chevron-right"></i><a href="contact.html">Contactez-nous</a></li>
-                    <li class="li_h"><i class="fa-solid fa-chevron-right"></i><a href="A propos.html">À propos de nous</a></li>
-                    <li class="li_h"><i class="fa-solid fa-chevron-right"></i><a href="#">Retour en haut de page</a></li>
-            </div>
-            <div class="footer_">
-                <h2>Nos réseaux sociaux</h2>
-                <div class="footer_cont">
-                    <ul class="ico">
-                        <li style="color: #4267B2;"><i class="fa-brands fa-facebook-f"></i></li>
-                        <li style="color: #E1306C;"><i class="fa-brands fa-instagram"></i></li>
-                        <li style="color: black;"><i class="fa-brands fa-x-twitter"></i></li>
-                        <li  style="color: #FF0000;"><i class="fa-brands fa-youtube"></i></li>
-                    </ul>
-                    <ul>
-                        <li><a href="">Rejoignez nous sur facebook</a></li>
-                        <li><a href="">Suivez-nous sur instagram</a></li>
-                        <li><a href="">Suivez-nous sur x-twitter</a></li>
-                        <li><a href="">Abonnez-vous à notre chaîne YouTube</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="copy">
-            <div class="copyrights">
-                <span id="copy_icon">&copy;</span> <span>Maroc.Net2024</span>, Tous droits réservés.
-            </div>
-            <div class="yahya">
-                By <span>YAHYA AKLI</span>
-            </div>
-        </div>
-    </div>
+    <?php include("./components/footer.php")?>
     <script src="javascript/main.js"></script>
 </body>
 </html>

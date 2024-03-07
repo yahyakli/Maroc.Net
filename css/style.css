@@ -44,7 +44,7 @@ body{
     scroll-behavior: smooth;
 }
 header{
-    height: 140px;
+    height: 160px;
     width: 100%;
     background-color:var(--dark) ;
     position: fixed;
@@ -59,20 +59,33 @@ header{
     background-color:var(--primary) ;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
     box-sizing: border-box;
-    justify-content: space-around;
-    font-size: 1.5em;
 }
-.date{
-    text-align: center;
-}
-.localisation{
-    text-align: center;
-}
-.top_section small, .top_section i{
-    margin-right: 0.3em;
+#userIcon{
+    font-size: 20px;
     color: var(--secondary);
-    cursor: pointer;
+}
+.active{
+    color: var(--secondary) !important;
+}
+.signLog{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    a{
+        text-decoration: none;
+        color: var(--primary);
+        font-size: 20px;
+        background-color: var(--secondary);
+        border-radius: 5px;
+        padding: 3px 5px;
+    }
+}
+.userName{
+    font-size: 20px;
+    color: var(--secondary);
 }
 .nav_bar {
     height: 75%;
@@ -206,8 +219,8 @@ header{
 }
 .cont{
     width: 100% ;
-    margin-top: 140px;
-    height: 450px;
+    margin-top: 170px;
+    height: 75vh;
     padding-bottom: 70px;
     background-image: url(../prIMG/logo_transparent.png);
     background-size: 20%;
@@ -796,9 +809,6 @@ header{
     .nav_bar a{
         font-size: 12px;
     }
-    .localisation{
-        text-align: center;
-    }
     .obser{
         margin-top: 20px;
     }
@@ -849,7 +859,7 @@ header{
         }
     }
     header{
-        height: 100px;
+        height: 130px;
     }
     .menu{
         display: flex;
@@ -871,6 +881,9 @@ header{
         justify-content: space-between;
     }
     .cont{
+        margin-top: 140px;
+    }
+    .top_cont{
         margin-top: 100px;
     }
 }

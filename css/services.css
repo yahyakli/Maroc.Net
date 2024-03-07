@@ -10,7 +10,7 @@ body{
     background-color: white;
 }
 .top_cont{
-    margin-top: 100px;
+    margin-top: 160px;
     background-image: url(../prIMG/our_services.jpg);
     background-size: cover;
 }
@@ -54,4 +54,9 @@ body{
 .cart_down a:hover{
     color: white;
     background-color: var(--primary);
+}
+@media (max-width:750px){
+    .top_cont{
+        margin-top: 100px;
+    }
 }

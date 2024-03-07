@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon"  href="prIMG/favicon.png">
-        <title>Maroc.Net-Mohammedia</title>
+        <title>Maroc.net-Services</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/services.css">
@@ -12,36 +12,13 @@
         <link rel="stylesheet" href="fontawesome-free-6.5.1-web/css/fontawesome.min.css">
     </head>
 <body>
-    <header class="header">
-        <div class="top_section">
-            <div class="localisation">
-                <i class="fa-solid fa-location-dot"></i>
-                <small>Kadi Tazi, Mohammedia, Casablanca-Settat, Maroc</small>
-            </div>
-            <div class="date">
-                <i class="fa-regular fa-clock"></i>
-                <small>Lun-Ven/9-21</small>
-            </div>
-        </div>
-        <div class="nav_bar nav_cont">
-            <a href="#"><img src="prIMG/logo.png" alt=""></a>
-            <div class="options">
-                    <a href="index.html">Accueil</a>
-                    <a href="services.html"  style="color: #eeeeee;">Services</a>
-                    <a href="contact.html">Contactez-nous</a>
-                    <a href="A propos.html">À propos de nous</a>
-            </div>
-            <div class="menu">
-                <i id="menu_btn" class="fa-solid fa-bars"></i>
-            </div>
-        </div>
-    </header>
+    <?php include('./components/header.php')?>
     <div id="menu_cont" class="menu_cont">
         <ul class="menu_links">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="services.html" style="color: #eeeeee;">Services</a></li>
-            <li><a href="contact.html">Contactez-nous</a></li>
-            <li><a href="A propos.html">À propos de nous</a></li>
+            <li><a href="index.php">Accueil</a></li>
+            <li><a href="services.php" style="color: #eeeeee;">Services</a></li>
+            <li><a href="contact.php">Contactez-nous</a></li>
+            <li><a href="A propos.php">À propos de nous</a></li>
         </ul>
     </div>
     <button id="to_top" class="to_top"><a href="#"><i class="fa-solid fa-arrow-up-long"></i></a></button>
@@ -50,9 +27,9 @@
             <h1 class="display-3 text-white mb-3">Services</h1>
             <nav>
                 <ol class=" back breadcrumb justify-content-center text-uppercase" style="background-color:#b8c0c0;">
-                    <li class="breadcrumb-item"><a href="index.html">Accueil</a></li>
+                    <li class="breadcrumb-item"><a href="index.php">Accueil</a></li>
                     <li class="breadcrumb-item text-white active" style="cursor: pointer;">Service</li>
-                    <li class="breadcrumb-item"><a href="contact.html">Contactez-nous</a></li>
+                    <li class="breadcrumb-item"><a href="contact.php">Contactez-nous</a></li>
                 </ol>
             </nav>
         </div>
@@ -72,7 +49,7 @@
                             <p class="text">Avec le Wi-Fi de Maroc.Net, vous profiterez d'un excellent service et d'une expérience inoubliable</p>
                         </div>
                         <div class="cart_down">
-                            <a href="index.html#wifi">Découvrir</a>
+                            <a href="index.php#wifi">Découvrir</a>
                         </div>
                     </div>
                 </div>
@@ -84,7 +61,7 @@
                             <p class="text">Avec le Wi-Fi de l'entreprise, vous pouvez passer à un autre monde à une vitesse exceptionnelle</p>
                         </div>
                         <div class="cart_down">
-                            <a href="index.html#fibre">Découvrir</a>
+                            <a href="index.php#fibre">Découvrir</a>
                         </div>
                     </div>
                 </div>
@@ -96,7 +73,7 @@
                             <p class="text">Découvrez nos derniers Netphone dotés de spécifications exceptionnelles et à un prix concurrentiel</p>
                         </div>
                         <div class="cart_down">
-                            <a href="index.html#NetPhone">Découvrir</a>
+                            <a href="index.php#NetPhone">Découvrir</a>
                         </div>
                     </div>
                 </div>
@@ -108,7 +85,7 @@
                             <p class="text">Bénéficiez de nos toutes dernières offres exceptionnelles et découvrez un nouveau monde</p>
                         </div>
                         <div class="cart_down">
-                            <a href="index.html#forfait">Découvrir</a>
+                            <a href="index.php#forfait">Découvrir</a>
                         </div>
                     </div>
                 </div>
@@ -163,64 +140,7 @@
             </div>
         </div>
     </div>
-    <div style="box-sizing: border-box; padding: 0 60px; background-color:#47555e; box-shadow: 2px -2px 20px black;">
-        <div class="footer" >
-            <div class="footer_">
-                <h2>Adresse</h2>
-                <div class="footer_cont">
-                    <ul>
-                        <li style="display: flex; align-items: center;"><i style="margin-right: 10px;" class="fa-solid fa-location-dot"></i>Kadi Tazi, Mohammedia, Casablanca-Settat, Maroc</li>
-                        <li style="display: flex; align-items: center;"><i style="margin-right: 10px;" class="fa-solid fa-phone"></i>+212 543976232</li>
-                        <li style="display: flex; align-items: center;"><i style="margin-right: 10px;" class="fa-solid fa-envelope"></i>Maroc.Net@gmail.com</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer_">
-                <h2>Services</h2>
-                <ul>
-                    <li class="li_h"><i class="fa-solid fa-chevron-right"></i><a href="index.html#forfait">Forfait</a></li>
-                    <li class="li_h"><i class="fa-solid fa-chevron-right"></i><a href="index.html#wifi">Wi-Fi</a></li>
-                    <li class="li_h"><i class="fa-solid fa-chevron-right"></i><a href="index.html#fibre">La fibre de Maroc.Net</a></li>
-                    <li class="li_h"><i class="fa-solid fa-chevron-right"></i><a href="contact.html">Réparation</a></li>
-                    <li class="li_h"><i class="fa-solid fa-chevron-right"></i><a href="index.html#NetPhone">Smartphone</a></li>
-                </ul>
-            </div>
-            <div class="footer_">
-                <h2>Liens rapides</h2>
-                <ul>
-                    <li class="li_h"><i class="fa-solid fa-chevron-right"></i><a href="index.html">Accueil</a></li>
-                    <li class="li_h"><i class="fa-solid fa-chevron-right"></i><a href="contact.html">Contactez-nous</a></li>
-                    <li class="li_h"><i class="fa-solid fa-chevron-right"></i><a href="A propos.html">À propos de nous</a></li>
-                    <li class="li_h"><i class="fa-solid fa-chevron-right"></i><a href="services.html">Services</a></li>
-                    <li class="li_h"><i class="fa-solid fa-chevron-right"></i><a href="#">Retour en haut de page</a></li>
-            </div>
-            <div class="footer_">
-                <h2>Nos réseaux sociaux</h2>
-                <div class="footer_cont">
-                    <ul class="ico">
-                        <li style="color: #4267B2;"><i class="fa-brands fa-facebook-f"></i></li>
-                        <li style="color: #E1306C;"><i class="fa-brands fa-instagram"></i></li>
-                        <li style="color: black;"><i class="fa-brands fa-x-twitter"></i></li>
-                        <li  style="color: #FF0000;"><i class="fa-brands fa-youtube"></i></li>
-                    </ul>
-                    <ul>
-                        <li><a href="">Rejoignez nous sur facebook</a></li>
-                        <li><a href="">Suivez-nous sur instagram</a></li>
-                        <li><a href="">Suivez-nous sur x-twitter</a></li>
-                        <li><a href="">Abonnez-vous à notre chaîne YouTube</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="copy">
-            <div class="copyrights">
-                <span id="copy_icon">&copy;</span> <span>Maroc.Net2024</span>, Tous droits réservés.
-            </div>
-            <div class="yahya">
-                By <span>YAHYA AKLI</span>
-            </div>
-        </div>
-    </div>
+    <?php include("./components/footer.php")?>
     <script src="javascript/main.js"></script>
 </body>
 </html>
