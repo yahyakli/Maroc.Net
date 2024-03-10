@@ -1,23 +1,75 @@
 <?php
-session_start();
-$userName = isset($_SESSION["name"]) ? $_SESSION["name"] : "";
+    session_start();
+    $userName = isset($_SESSION["name"]) ? $_SESSION["name"] : "";
+    if(isset($_POST['logout'])){
+        $_SESSION = array();
+        session_destroy();
+        header('location: Login.php');
+        exit;
+    }
 ?>
 <header class="header">
     <style>
         .hide{
             display: none;
         }
+        .userOption{
+            position: fixed;
+            top: 40px;
+            right: 0px;
+            background-color: #333;
+            height: 150px;
+            width: 150px;
+            ul{
+                list-style: none;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+                a{
+                    color: #eeeeee;
+                    text-decoration: none;
+                    width: 100%;
+                    text-align: center;
+                    font-size: 20px;
+                    padding: 10px 0;
+                    cursor: pointer;
+                }
+                button{
+                    color: #eeeeee;
+                    background-color: transparent;
+                    border: none;
+                    text-decoration: none;
+                    width: 100%;
+                    text-align: center;
+                    font-size: 20px;
+                    padding: 10px 0;
+                    cursor: pointer;
+                }
+            }
+        }
     </style>
     <div class="top_section">
         <div class="userName">
-            Welcome <?php echo $userName; ?>
+            Bienvenue <?php echo htmlspecialchars($userName); ?>
         </div>
         <div class="signLog">
             <a href="Signup.php" style="background-color: #333;color:white;">Sign up</a>
             <a href="Login.php">Login</a>
         </div>
-        <a href="" id="userIcon"><i class="fa fa-user"></i></a>
+        <i id="userIcon" class="fa fa-user"></i>
     </div>
+    <form action="" method="post">
+        <div class="userOption hide">
+            <ul>
+                <a href=""><li>Profile</li></a>
+                <button type="submit" id="logout" name="logout"><li>Log out</li></button>
+            </ul>
+        </div>
+    </form>
     <div class="nav_bar">
         <a href="#"><img src="prIMG/logo.png" alt=""></a>
         <div class="options">
@@ -57,7 +109,7 @@ $userName = isset($_SESSION["name"]) ? $_SESSION["name"] : "";
             services.classList.add("active");
         } else if (locat === "contact.php") {
             contact.classList.add("active");
-        } else if (locat === "A propos.php") {
+        } else if (locat === "a%20propos.php") {
             propos.classList.add("active");
         }
 
@@ -75,5 +127,9 @@ $userName = isset($_SESSION["name"]) ? $_SESSION["name"] : "";
             accIcon.classList.add("hide");
             welcome.classList.add("hide");
         }
+        accIcon.addEventListener("click", ()=>{
+            let menu = document.querySelector(".userOption");
+            menu.classList.toggle("hide");
+        })
     </script>
 </header>

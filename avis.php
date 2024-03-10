@@ -7,8 +7,7 @@
         <title>Maroc.Net-Avis</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="fontawesome-free-6.5.1-web/css/all.min.css">
-        <link rel="stylesheet" href="fontawesome-free-6.5.1-web/css/fontawesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <link rel="stylesheet" href="css/avis.css">
     </head>
 <body>
@@ -28,7 +27,7 @@
         }
         @media (max-width:750px){
             .page{
-                margin-top: 130px;
+                margin-top: 150px;
             }
         }
     </style>
@@ -42,12 +41,10 @@
         while($row = mysqli_fetch_array($avis)){
             $post_creation_time_str = $row["created_at"];
 
-            // Convert the string to a DateTime object
             $post_creation_time = new DateTime($post_creation_time_str);
 
             $current_time = new DateTime();
 
-            // Calculate the time difference
             $time_difference = $current_time->diff($post_creation_time);
 
             $formatted_time_difference = '';
@@ -67,20 +64,44 @@
             if ($time_difference->d > 0) {
             $formatted_time_difference = $time_difference->d . ' days ';
             }
-            echo htmlspecialchars_decode("
-                <div class='container bg-light mb-5 p-3 cartA'>
-                    <div style='display: flex; width:100%; justify-content: space-between;'>
-                        <h2>$row[nom]</h2>
+            echo ("
+                <div class='container bg-light mb-5 p-3 cartA' style='position: relative;'>
+                    <div style='display: flex; width:100%; justify-content: space-between;align-items:center;'>
+                        <h2>$row[name]</h2>
                         <h3>$formatted_time_difference ago</h3>
                     </div>
                     <h4>Email: $row[email]</h4>
                     <h4>Sujet : $row[sujet]</h4>
+                    <div class='i$row[id_user] hide user_edit' style='position: absolute;bottom:30px; right:30px;'><i style=' border:1px solid black; border-radius:50%;padding:5px 18px;font-size:30px;' class='fa-solid fa-ellipsis-vertical'></i>
+                        <div class='hide' style='position:absolute;bottom:-40px;right:-40px;'>
+                            <a href='deleteAvis.php? id=$row[id]' style='border: none;background-color: #47555e;color: #eeeeee;padding: 10px 20px;border-radius:10px; font-size:20px;'>suprimer</a>
+                        </div>
+                    </div>
                     <h3>$row[body]</h3>
                 </div>
             ");
         }
     ?>
-    <?php include("./components/footer.php")?>
+    <?php include("./components/footer.php")
+    ?>
+    <script>
+        var idButtons = document.querySelectorAll(".i<?php echo $_SESSION['id']?>");
+        idButtons.forEach(ele => {
+            ele.classList.remove('hide');
+            ele.addEventListener("click", ()=>{
+                chld = ele.children[1];
+                chld.classList.toggle('hide');
+            })
+        });
+        let fields = document.querySelectorAll('.user_edit');
+        fields.forEach(ele => {
+            if(ele.classList.contains('i<?php echo $_SESSION['id']?>') === false){
+                par = ele.parentElement;
+                par.removeChild(ele);
+            }
+        });
+        </script>
+    <script src="./javascript/main.js"></script>
 </div>
 </body>
 </html>

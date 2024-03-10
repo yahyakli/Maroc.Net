@@ -1,3 +1,24 @@
+<?php
+    include('./config/config.php');
+    session_start();
+    if(isset($_POST['submit'])){
+        $NAME = $_SESSION['name'];
+        if(!empty($NAME)){
+            $EMAIL = $_SESSION['email'];
+            $ID_USER = $_SESSION['id'];
+            $SUBJECT = 'Non spécifié';
+            if($_POST['subject'] !== ''){
+                $SUBJECT = $_POST['subject'];
+            }
+            $BODY = $_POST['body'];
+            $upload = "INSERT INTO avis (name, email, sujet, body, id_user) VALUE ('$NAME', '$EMAIL', '$SUBJECT', '$BODY', '$ID_USER')";
+            mysqli_query($con, $upload);
+            header('location: contact.php');
+        }else{
+            header('location:Login.php');
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -13,22 +34,6 @@
     </head>
 <body>
     <?php include('./components/header.php')?>
-    <?php
-        session_start();
-        include('./config/config.php');
-        if (isset($_POST['submit'])){
-            $NAME = $_SESSION['name'];
-            $EMAIL = $_SESSION['email'];
-            $SUBJECT = 'Non spécifié';
-            if($_POST['subject'] !== ''){
-                $SUBJECT = $_POST['subject'];
-            }
-            $BODY = $_POST['body'];
-            $upload = "INSERT INTO avis (nom, email, sujet, body) VALUE ('$NAME', '$EMAIL', '$SUBJECT', '$BODY')";
-            mysqli_query($con, $upload);
-            header('location: contact.php');
-        }
-    ?>
     <div id="menu_cont" class="menu_cont">
         <ul class="menu_links">
             <li><a href="index.php">Accueil</a></li>

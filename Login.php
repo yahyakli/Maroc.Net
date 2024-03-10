@@ -9,9 +9,9 @@ if(isset($_POST['submit'])){
     if (mysqli_num_rows($result) == 1) {
         $row = mysqli_fetch_assoc($result);
         $_SESSION["name"] = $row['name'];
-        echo $_SESSION['name'];
         $_SESSION["email"] = $row["email"];
         $_SESSION["password"] = $row["password"];
+        $_SESSION["id"] = $row["id"];
         header('Location: index.php');
     }else{
         echo "<script>window.alert('Wrong email or password')</script>";
