@@ -11,7 +11,8 @@ if(isset($_POST['submit'])){
         if(mysqli_num_rows($result) == 1){
             echo "<script>window.alert('This email is already used')</script>";
         }else{
-            $data = "INSERT INTO users (name, email, password) VALUE ('$NAME', '$EMAIL', '$PASSWORD')";
+            $HASHED_PASSWORD = password_hash($PASSWORD, PASSWORD_DEFAULT);
+            $data = "INSERT INTO users (name, email, password) VALUE ('$NAME', '$EMAIL', '$HASHED_PASSWORD')";
             mysqli_query($con, $data);
             header('location: Login.php');
         }
@@ -33,7 +34,7 @@ if(isset($_POST['submit'])){
     <title>Maroc.Net-SignUp</title>
 </head>
 <body>
-    <div style="position: fixed;top:70px;left:100px;">
+    <div style="position: fixed;top:20px;left:20px;">
         <a style="font-size: 20px;text-decoration:none; padding:10px 20px;background-color:white;color:black; border-radius:10px;" href="index.php"><i class="fa-solid fa-circle-left" style="margin-right: 10px;"></i>Retour</a>
     </div>
     <form action="" method="post" id="signupForm">
@@ -43,25 +44,25 @@ if(isset($_POST['submit'])){
         <div>
             <fieldset>
                 <legend>Full name</legend>
-                <input type="text" name="name" id="name">
+                <input type="text" name="name" id="name" maxlength="20" required>
             </fieldset>
         </div>
         <div>
             <fieldset>
                 <legend>Email</legend>
-                <input type="email" name="email" id="email">
+                <input type="email" name="email" id="email" maxlength="35" required>
             </fieldset>
         </div>
         <div>
             <fieldset>
                 <legend>Password</legend>
-                <input type="password" name="password" id="password">
+                <input type="password" name="password" id="password" minlength="8" maxlength="14" placeholder="(8-14) lettre" required>
             </fieldset>
         </div>
         <div>
             <fieldset>
                 <legend>Confirm password</legend>
-                <input type="password" name="Cpassword" id="Cpassword">
+                <input type="password" name="Cpassword" id="Cpassword" required>
             </fieldset>
         </div>
         <div class="submit">

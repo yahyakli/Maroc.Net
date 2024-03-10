@@ -4,15 +4,20 @@ session_start();
 if(isset($_POST['submit'])){
     $EMAIL = $_POST['email'];
     $PASSWORD = $_POST['password'];
-    $data = "SELECT * FROM users WHERE email = '$EMAIL' AND password = '$PASSWORD'";
+    $data = "SELECT * FROM users WHERE email = '$EMAIL'";
     $result = mysqli_query($con, $data);
     if (mysqli_num_rows($result) == 1) {
         $row = mysqli_fetch_assoc($result);
-        $_SESSION["name"] = $row['name'];
-        $_SESSION["email"] = $row["email"];
-        $_SESSION["password"] = $row["password"];
-        $_SESSION["id"] = $row["id"];
-        header('Location: index.php');
+        $DATA_PASSWORD = $row['password'];
+        if(password_verify($PASSWORD, $DATA_PASSWORD)){
+            $_SESSION["name"] = $row['name'];
+            $_SESSION["email"] = $row["email"];
+            $_SESSION["password"] = $PASSWORD;
+            $_SESSION["id"] = $row["id"];
+            header('Location: index.php');
+        }else{
+            echo "<script>window.alert('Wrong email or password')</script>";
+        }
     }else{
         echo "<script>window.alert('Wrong email or password')</script>";
     }
@@ -32,7 +37,7 @@ mysqli_close($con);
     <title>Maroc.Net-Login</title>
 </head>
 <body>
-    <div style="position: fixed;top:70px;left:100px;">
+    <div style="position: fixed;top:20px;left:20px;">
         <a style="font-size: 20px;text-decoration:none; padding:10px 20px;background-color:white;color:black; border-radius:10px;" href="index.php"><i class="fa-solid fa-circle-left" style="margin-right: 10px;"></i>Retour</a>
     </div>
     <form action="" method="post" id="signupForm">
@@ -42,13 +47,13 @@ mysqli_close($con);
         <div>
             <fieldset>
                 <legend>Email</legend>
-                <input type="email" name="email" id="email">
+                <input type="email" name="email" id="email" required maxlength="35">
             </fieldset>
         </div>
         <div>
             <fieldset>
                 <legend>Password</legend>
-                <input type="password" name="password" id="password">
+                <input type="password" name="password" id="password" required maxlength="14">
             </fieldset>
         </div>
         <div class="submit">

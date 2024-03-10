@@ -66,6 +66,7 @@ header{
 #userIcon{
     font-size: 20px;
     color: var(--secondary);
+    cursor: pointer;
 }
 .active{
     color: var(--secondary) !important;
@@ -81,11 +82,13 @@ header{
         background-color: var(--secondary);
         border-radius: 5px;
         padding: 3px 5px;
+        cursor: pointer;
     }
 }
 .userName{
     font-size: 20px;
     color: var(--secondary);
+    cursor: pointer;
 }
 .nav_bar {
     height: 75%;

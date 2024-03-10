@@ -131,5 +131,14 @@
             let menu = document.querySelector(".userOption");
             menu.classList.toggle("hide");
         })
+        document.addEventListener("click", (e)=>{
+            let userIcon = document.getElementById('userIcon');
+            let userOption = document.querySelector('.userOption');
+            isItInIcon = e.target === userIcon;
+            isItInmenu = e.target === userOption;
+            if(!isItInIcon && !isItInmenu && userOption.classList.contains('hide') === false){
+                userOption.classList.add('hide');
+            }
+        })
     </script>
 </header>
