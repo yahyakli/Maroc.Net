@@ -7,6 +7,9 @@
         header('location: Login.php');
         exit;
     }
+    if (empty($_SESSION["name"])) {
+        header('Location: Login.php');
+    }
 ?>
 <header class="header">
     <style>
@@ -20,6 +23,8 @@
             background-color: #333;
             height: 150px;
             width: 150px;
+            border-radius: 0 0 0 20px;
+            transition: 0.3s ease;
             ul{
                 list-style: none;
                 height: 100%;
@@ -28,33 +33,42 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                gap: 30px;
+                box-sizing: border-box;
                 a{
                     color: #eeeeee;
                     text-decoration: none;
                     width: 100%;
                     text-align: center;
                     font-size: 20px;
-                    padding: 10px 0;
                     cursor: pointer;
+                    border: 1px solid #eeeeee;
+                    padding: 10px 0;
+                    border-top: none;
+                    border-left: none;
+                    &:hover{
+                        color: gray;
+                    }
                 }
                 button{
                     color: #eeeeee;
                     background-color: transparent;
-                    border: none;
                     text-decoration: none;
                     width: 100%;
                     text-align: center;
                     font-size: 20px;
-                    padding: 10px 0;
                     cursor: pointer;
+                    border: none;
+                    padding: 10px 0;
+                    &:hover{
+                        color: gray;
+                    }
                 }
             }
         }
     </style>
     <div class="top_section">
         <div class="userName">
-            Bienvenue <?php echo htmlspecialchars($userName); ?>
+            Bienvenue <span><?php echo htmlspecialchars($userName); ?></span>
         </div>
         <div class="signLog">
             <a href="Signup.php" style="background-color: #333;color:white;">Sign up</a>
@@ -66,6 +80,7 @@
         <div class="userOption hide">
             <ul>
                 <a href=""><li>Profile</li></a>
+                <a href=""><li>Cart</li></a>
                 <button type="submit" id="logout" name="logout"><li>Log out</li></button>
             </ul>
         </div>

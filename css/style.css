@@ -67,6 +67,9 @@ header{
     font-size: 20px;
     color: var(--secondary);
     cursor: pointer;
+    &:hover{
+        color: #b8c0c0;
+    }
 }
 .active{
     color: var(--secondary) !important;
@@ -89,6 +92,10 @@ header{
     font-size: 20px;
     color: var(--secondary);
     cursor: pointer;
+    span:hover{
+        color: #b8c0c0;
+        text-decoration: underline;
+    }
 }
 .nav_bar {
     height: 75%;

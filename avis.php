@@ -72,9 +72,9 @@
                     </div>
                     <h4>Email: $row[email]</h4>
                     <h4>Sujet : $row[sujet]</h4>
-                    <div class='i$row[id_user] hide user_edit' style='position: absolute;bottom:30px; right:30px;'><i style=' border:1px solid black; border-radius:50%;padding:5px 18px;font-size:30px;' class='fa-solid fa-ellipsis-vertical'></i>
+                    <div class='i$row[id_user] hide user_edit' style='position: absolute;bottom:30px; right:30px;'><i style=' border:1px solid black; border-radius:50%;padding:5px 17px;font-size:30px;' class='fa-solid fa-ellipsis-vertical'></i>
                         <div class='hide' style='position:absolute;bottom:-40px;right:-40px;'>
-                            <a href='deleteAvis.php? id=$row[id]' style='border: none;background-color: #47555e;color: #eeeeee;padding: 10px 20px;border-radius:10px; font-size:20px;'>suprimer</a>
+                            <a href='deleteAvis.php? id=$row[id]' style='border: none;background-color: #47555e;color: #eeeeee;padding: 10px 20px;border-radius:10px; font-size:20px;'>Suprimer</a>
                         </div>
                     </div>
                     <h3>$row[body]</h3>
@@ -91,6 +91,13 @@
             ele.addEventListener("click", ()=>{
                 chld = ele.children[1];
                 chld.classList.toggle('hide');
+            })
+            document.addEventListener("click", (e)=>{
+                isIntIcon = e.target === ele;
+                isInMenu = e.target === ele.firstChild;
+                if(!isInMenu && !isIntIcon && ele.classList.contains('hide') === false){
+                    ele.children[1].classList.add('hide');
+                }
             })
         });
         let fields = document.querySelectorAll('.user_edit');
