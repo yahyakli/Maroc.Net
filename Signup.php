@@ -17,7 +17,6 @@ if(isset($_POST['submit'])){
             header('location: Login.php');
         }
     }else{
-        echo "<script>window.alert('The passwords are not matching')</script>";
     }
 }
 ?>
@@ -34,34 +33,31 @@ if(isset($_POST['submit'])){
     <title>Maroc.Net-SignUp</title>
 </head>
 <body>
-    <div style="position: fixed;top:20px;left:20px;">
-        <a style="font-size: 20px;text-decoration:none; padding:10px 20px;background-color:white;color:black; border-radius:10px;" href="index.php"><i class="fa-solid fa-circle-left" style="margin-right: 10px;"></i>Retour</a>
-    </div>
     <form action="" method="post" id="signupForm">
         <div class="title">
             <h1>SignUp</h1>
         </div>  
         <div>
             <fieldset>
-                <legend>Full name</legend>
+                <legend>Nom et Prenom <span class="text_red" style="font-size: 13px;"></span></legend>
                 <input type="text" name="name" id="name" maxlength="20" required>
             </fieldset>
         </div>
         <div>
             <fieldset>
-                <legend>Email</legend>
+                <legend>Email <span class="text_red" style="font-size: 13px;"></span></legend>
                 <input type="email" name="email" id="email" maxlength="35" required>
             </fieldset>
         </div>
         <div>
             <fieldset>
-                <legend>Password</legend>
+                <legend>Mot de passe <span class="text_red" style="font-size: 13px;"></span></legend>
                 <input type="password" name="password" id="password" minlength="8" maxlength="14" placeholder="(8-14) lettre" required>
             </fieldset>
         </div>
         <div>
             <fieldset>
-                <legend>Confirm password</legend>
+                <legend>Confirmez <span class="text_red" style="font-size: 13px;"></span></legend>
                 <input type="password" name="Cpassword" id="Cpassword" required>
             </fieldset>
         </div>
@@ -73,6 +69,84 @@ if(isset($_POST['submit'])){
         </div>
     </form>
     <script>
+        let checkIt = false;
+        //start check email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const isValidEmail = email => emailRegex.test(email);
+        let EmailInput = document.getElementById('email');
+        EmailInput.addEventListener('focusout', ()=>{
+            if(!isValidEmail(EmailInput.value)){
+                checkIt = true;
+                let field = EmailInput.parentElement;
+                let legend = field.children[0];
+                let span = legend.children[0];
+                span.textContent = "(Email non valide)";
+                EmailInput.parentElement.classList.add('error');
+            }
+        })
+        //end check email
+        //start check password
+        let passwordRegex = /^.{8,14}$/;;
+        let passwordInput = document.getElementById('password');
+        passwordInput.addEventListener('focusout', ()=>{
+            if(!passwordRegex.test(passwordInput.value)){
+                checkIt = true;
+                let field = passwordInput.parentElement;
+                let legend = field.children[0];
+                let span = legend.children[0];
+                span.textContent = "(Mot de passe non valide)";
+                passwordInput.parentElement.classList.add('error');
+            }
+        })
+        let confirmPassword = document.getElementById('Cpassword');
+        confirmPassword.addEventListener("focusout", ()=>{
+            if(confirmPassword.value !== passwordInput.value){
+                checkIt = true;
+                let field = confirmPassword.parentElement;
+                let legend = field.children[0];
+                let span = legend.children[0];
+                span.textContent = "(Non compatible)";
+                confirmPassword.parentElement.classList.add('error');
+            }
+        })
+        //end check password
+        //start check if inputs empty
+        let inputs = document.querySelectorAll('input');
+        inputs.forEach(ele => {
+            ele.addEventListener('focusout', ()=>{
+                if(ele.value === ""){
+                    checkIt = true;
+                    let field = ele.parentElement;
+                    let legend = field.children[0];
+                    let span = legend.children[0];
+                    span.textContent = "(Le champ est vide)";
+                    ele.parentElement.classList.add('error');
+                }
+            })
+            ele.addEventListener('focus', ()=>{
+                let field = ele.parentElement;
+                let legend = field.children[0];
+                let span = legend.children[0];
+                span.textContent = "";
+                ele.classList.remove('text_red');
+                ele.parentElement.classList.remove('error');
+                checkIt = false;
+                signUpForm.children[0].removeChild(h4);
+            })
+        });
+        //end check if inputs empty
+        // start check on submit
+        let signUpForm = document.getElementById('signupForm');
+        let h4 = document.createElement('h4');
+        signUpForm.addEventListener('submit', (e)=>{
+            if(checkIt === true){
+                e.preventDefault();
+                h4.textContent = "Formulaire incomplet";
+                h4.classList.add('text_red');
+                signUpForm.children[0].appendChild(h4);
+            }
+        })
+        // end check on submit
         <?php include('./javascript/main.js')?>
     </script>
 </body>

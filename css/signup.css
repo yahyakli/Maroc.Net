@@ -81,7 +81,6 @@ form{
         }
     }
 }
-
 .submit{
     margin-top: 20px;
     width: 100%;
@@ -114,4 +113,10 @@ form{
             text-decoration: underline;
         }
     }
+}
+.error{
+    border: 1px solid red;
+}
+.text_red{
+    color: red;
 }

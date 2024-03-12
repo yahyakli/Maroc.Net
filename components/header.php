@@ -42,7 +42,7 @@
                     font-size: 20px;
                     cursor: pointer;
                     border: 1px solid #eeeeee;
-                    padding: 10px 0;
+                    padding: 12px 0;
                     border-top: none;
                     border-left: none;
                     &:hover{
@@ -58,7 +58,7 @@
                     font-size: 20px;
                     cursor: pointer;
                     border: none;
-                    padding: 10px 0;
+                    padding: 12px 0;
                     &:hover{
                         color: gray;
                     }
