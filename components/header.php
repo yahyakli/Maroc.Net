@@ -68,18 +68,14 @@
     </style>
     <div class="top_section">
         <div class="userName">
-            Bienvenue <span><?php echo htmlspecialchars($userName); ?></span>
-        </div>
-        <div class="signLog">
-            <a href="Signup.php" style="background-color: #333;color:white;">Sign up</a>
-            <a href="Login.php">Login</a>
+            Bienvenue <a href="profile.php"><?php echo htmlspecialchars($userName); ?></a>
         </div>
         <i id="userIcon" class="fa fa-user"></i>
     </div>
     <form action="" method="post">
         <div class="userOption hide">
             <ul>
-                <a href=""><li>Profile</li></a>
+                <a href="profile.php"><li>Profile</li></a>
                 <a href=""><li>Cart</li></a>
                 <button type="submit" id="logout" name="logout"><li>Log out</li></button>
             </ul>
@@ -128,20 +124,9 @@
             propos.classList.add("active");
         }
 
-        let sessionName = '<?php echo $userName; ?>';
-        let signLog = document.querySelector(".signLog");
         let accIcon = document.getElementById("userIcon");
         let welcome = document.querySelector(".userName");
         
-        if (sessionName !== "") {
-            signLog.classList.add("hide");
-            accIcon.classList.remove("hide");
-            welcome.classList.remove("hide");
-        } else {
-            signLog.classList.remove("hide");
-            accIcon.classList.add("hide");
-            welcome.classList.add("hide");
-        }
         accIcon.addEventListener("click", ()=>{
             let menu = document.querySelector(".userOption");
             menu.classList.toggle("hide");

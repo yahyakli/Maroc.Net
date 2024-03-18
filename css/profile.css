@@ -1,0 +1,25 @@
+*{
+    margin:0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+:root{
+    --primary:#47555e;
+    --secondary:#eeeeee;
+    --thirdth:gray;
+    --mist:#b8c0c0;
+    --dark:#19283f
+}
+::-webkit-scrollbar{
+    width: 0.7em;
+}
+::-webkit-scrollbar-track{
+    background-color:var(--primary) ;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--secondary);
+    border-radius: 100vh;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: var(--thirdth);
+}

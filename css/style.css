@@ -74,27 +74,18 @@ header{
 .active{
     color: var(--secondary) !important;
 }
-.signLog{
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    a{
-        text-decoration: none;
-        color: var(--primary);
-        font-size: 20px;
-        background-color: var(--secondary);
-        border-radius: 5px;
-        padding: 3px 5px;
-        cursor: pointer;
-    }
-}
 .userName{
     font-size: 20px;
     color: var(--secondary);
     cursor: pointer;
-    span:hover{
-        color: #b8c0c0;
-        text-decoration: underline;
+    a{
+        text-decoration: none;
+        color: var(--secondary);
+        text-transform: uppercase;
+        &:hover{
+            color: #b8c0c0;
+            text-decoration: underline;
+        }
     }
 }
 .nav_bar {

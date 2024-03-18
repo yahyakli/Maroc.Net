@@ -7,7 +7,8 @@
         <title>Maroc.Net-Avis</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="fontawesome-free-6.5.1-web/css/all.min.css">
+        <link rel="stylesheet" href="fontawesome-free-6.5.1-web/css/fontawesome.min.css">
         <link rel="stylesheet" href="css/avis.css">
     </head>
 <body>
@@ -54,15 +55,15 @@
             }
         
             if ($time_difference->i > 0) {
-                $formatted_time_difference = $time_difference->i . ' minutes ';
+                $formatted_time_difference = $time_difference->i . ' minutes';
             }
         
             if ($time_difference->h > 0) {
-                $formatted_time_difference = $time_difference->h . ' hours ';
+                $formatted_time_difference = $time_difference->h . ' hours';
             }
         
             if ($time_difference->d > 0) {
-            $formatted_time_difference = $time_difference->d . ' days ';
+                $formatted_time_difference = $time_difference->d . ' days';
             }
             echo ("
                 <div class='container bg-light mb-5 p-3 cartA' style='position: relative;'>
