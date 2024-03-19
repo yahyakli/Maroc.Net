@@ -21,9 +21,9 @@
             top: 40px;
             right: 0px;
             background-color: #333;
-            height: 150px;
-            width: 150px;
-            border-radius: 0 0 0 20px;
+            height: 200px;
+            width: 200px;
+            border-radius: 0 0 0 10px;
             transition: 0.3s ease;
             ul{
                 list-style: none;
@@ -42,7 +42,7 @@
                     font-size: 20px;
                     cursor: pointer;
                     border: 1px solid #eeeeee;
-                    padding: 12px 0;
+                    padding: 20px 0;
                     border-top: none;
                     border-left: none;
                     &:hover{
@@ -58,7 +58,7 @@
                     font-size: 20px;
                     cursor: pointer;
                     border: none;
-                    padding: 12px 0;
+                    padding: 20px 0;
                     &:hover{
                         color: gray;
                     }
@@ -70,14 +70,14 @@
         <div class="userName">
             Bienvenue <a href="profile.php"><?php echo htmlspecialchars($userName); ?></a>
         </div>
-        <i id="userIcon" class="fa fa-user"></i>
+        <img src="prIMG/profile.png" id="userIcon"></img>
     </div>
     <form action="" method="post">
         <div class="userOption hide">
             <ul>
-                <a href="profile.php"><li>Profile</li></a>
-                <a href=""><li>Cart</li></a>
-                <button type="submit" id="logout" name="logout"><li>Log out</li></button>
+                <a href="profile.php"><li><i class="fa-solid fa-user"></i> Profile</li></a>
+                <a href=""><li><i class="fa-solid fa-cart-shopping"></i> Cart</li></a>
+                <button type="submit" id="logout" name="logout"><li><i class="fa-solid fa-sign-out-alt"></i> Log out</li></button>
             </ul>
         </div>
     </form>
@@ -100,6 +100,7 @@
                 <option value="services"></option>
                 <option value="contact"></option>
                 <option value="a propos"></option>
+                <option value="avis"></option>
             </datalist>
             <i class="fa-solid fa-magnifying-glass" id="search_button"></i>
             <div class="menu">

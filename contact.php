@@ -11,7 +11,8 @@
                 $SUBJECT = $_POST['subject'];
             }
             $BODY = $_POST['body'];
-            $upload = "INSERT INTO avis (name, email, sujet, body, id_user) VALUE ('$NAME', '$EMAIL', '$SUBJECT', '$BODY', '$ID_USER')";
+            $currentDateTime = date("Y-m-d H:i:s");
+            $upload = "INSERT INTO avis (name, email, sujet, body, created_at, id_user) VALUE ('$NAME', '$EMAIL', '$SUBJECT', '$BODY', '$currentDateTime', '$ID_USER')";
             mysqli_query($con, $upload);
             header('location: contact.php');
         }else{

@@ -13,6 +13,10 @@ if(isset($_POST['login'])){
             $_SESSION["name"] = $row['name'];
             $_SESSION["email"] = $row["email"];
             $_SESSION["password"] = $PASSWORD;
+            $_SESSION["created_at"] = $row["created_at"];
+            $_SESSION["age"] = $row["age"];
+            $_SESSION["sexe"] = $row["sexe"];
+            $_SESSION["country"] = $row["country"];
             $_SESSION["id"] = $row["id"];
             header('Location: index.php');
         }else{

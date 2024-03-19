@@ -61,6 +61,8 @@ function inputsearch() {
         window.location.href = 'index.php#fibre'
     }else if(selectedOption === 'home'){
         window.location.href = 'index.php'
+    }else if(selectedOption === 'avis'){
+        window.location.href = 'avis.php'
     }
 }
 ///////////////////////////////////////////////////////

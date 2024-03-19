@@ -16,6 +16,9 @@
     }
     h3{
         margin-top: 40px;
+        box-sizing: border-box;
+        padding-right: 80px;
+        overflow-x: hidden;
     }
 }
 .hide{

@@ -69,13 +69,13 @@
                 <div class='container bg-light mb-5 p-3 cartA' style='position: relative;'>
                     <div style='display: flex; width:100%; justify-content: space-between;align-items:center;'>
                         <h2>$row[name]</h2>
-                        <h3>$formatted_time_difference ago</h3>
+                        <h4>$formatted_time_difference ago</h4>
                     </div>
-                    <h4>Email: $row[email]</h4>
-                    <h4>Sujet : $row[sujet]</h4>
+                    <h5>Email: $row[email]</h5>
+                    <h5>Sujet : $row[sujet]</h5>
                     <div class='i$row[id_user] hide user_edit' style='position: absolute;bottom:30px; right:30px;'><i style=' border:1px solid black; border-radius:50%;padding:5px 17px;font-size:30px;' class='fa-solid fa-ellipsis-vertical'></i>
                         <div class='hide' style='position:absolute;bottom:-40px;right:-40px;'>
-                            <a href='deleteAvis.php? id=$row[id]' style='border: none;background-color: #47555e;color: #eeeeee;padding: 10px 20px;border-radius:10px; font-size:20px;'>Suprimer</a>
+                            <a href='deleteAvis.php? id=$row[id]' style='border: none;background-color: #47555e;color: #eeeeee;padding: 10px 20px;border-radius:10px; font-size:20px;text-decoration:none;'>Suprimer</a>
                         </div>
                     </div>
                     <h3>$row[body]</h3>

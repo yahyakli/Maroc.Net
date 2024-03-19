@@ -63,12 +63,17 @@ header{
     padding: 0 30px;
     box-sizing: border-box;
 }
+.dark_mode{
+    filter: invert(95%);
+}
 #userIcon{
-    font-size: 20px;
-    color: var(--secondary);
     cursor: pointer;
+    height: 30px; 
+    border-radius:50%;
+    outline: 2px solid white;
+    transition: 0.4s ease;
     &:hover{
-        color: #b8c0c0;
+        transform:rotate(360deg);
     }
 }
 .active{
@@ -81,7 +86,6 @@ header{
     a{
         text-decoration: none;
         color: var(--secondary);
-        text-transform: uppercase;
         &:hover{
             color: #b8c0c0;
             text-decoration: underline;
