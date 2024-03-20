@@ -30,12 +30,12 @@ if(isset($_POST['submit'])){
     <style>
         <?php include('./css/signup.css')?>
     </style>
-    <title>Maroc.Net-SignUp</title>
+    <title>Maroc.Net-S'inscrire</title>
 </head>
 <body>
     <form action="" method="post" id="signupForm">
         <div class="title">
-            <h1>SignUp</h1>
+            <h1>S'inscrire</h1>
         </div>  
         <div>
             <fieldset>
@@ -62,10 +62,10 @@ if(isset($_POST['submit'])){
             </fieldset>
         </div>
         <div class="submit">
-            <button type="submit" id="submit" name="submit">Sign up</button>
+            <button type="submit" id="submit" name="submit">S'inscrire</button>
         </div>
         <div class="submit-cont">
-            <p>Already Have An Account? <a href="Login.php">Login</a></p>
+            <p>Already Have An Account? <a href="Login.php">Se connecter</a></p>
         </div>
     </form>
     <script>

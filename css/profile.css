@@ -23,6 +23,10 @@
 ::-webkit-scrollbar-thumb:hover{
     background-color: var(--thirdth);
 }
+body{
+    min-width: 300px;
+    background-color: var(--mist);
+}
 .banner{
     margin-top: 10px;
     height: 250px;
@@ -45,7 +49,7 @@
         position: absolute;
         height: 140px;
         border-radius: 50%;
-        outline: 5px solid white;
+        outline: 5px solid var(--mist);
         left: 40px;
         top: -50px;
     }
@@ -67,7 +71,8 @@ table{
     padding-left: 10px;
 }
 .tr1{
-    background-color: #b8c0c0;
+    background-color: var(--thirdth);
+    color: var(--secondary);
 }
 .tr2{
     background-color: var(--secondary);
@@ -103,4 +108,65 @@ table{
 .modifier:hover{
     color: #333;
     background-color: var(--secondary);
+}
+input{
+    width:250px; 
+    margin-right:5px;
+    margin-top:10px;
+    font-size:20px;
+    height:40px;
+    box-sizing:border-box; 
+    padding-left:10px;
+}
+.hide{
+    display: none;
+}
+.opa{
+    opacity: 0;
+}
+@media (max-width:992px){
+    .hide{
+        display: block !important;
+    }
+    table{
+        width: 100%;
+    }
+    .info{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img{
+            position: relative !important;
+            left: 0;
+            top: -50px;
+        }
+        div{
+            position: relative;
+            top: -40px;
+            justify-content: space-between;
+            h4{
+                font-size: 20px;
+            }
+        }
+    }
+    button{
+        font-size: 16px;
+    }
+    input{
+        height: 33px;
+        margin-top: 12px;
+    }
+    .tmodifier{
+        width: fit-content;
+    }
+}
+@media (max-width:550px){
+    .info div{
+        display: block;
+        padding-bottom:15px ;
+        h4{
+            font-size: 16px;
+            font-weight: bold;
+        }
+    }
 }

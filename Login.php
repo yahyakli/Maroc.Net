@@ -38,12 +38,12 @@ mysqli_close($con);
     <style>
         <?php include('./css/signup.css')?>
     </style>
-    <title>Maroc.Net-Login</title>
+    <title>Maroc.Net-Se connectre</title>
 </head>
 <body>
     <form action="" method="post" id="LoginForm">
         <div class="title">
-            <h1>Welcome Back!</h1>
+            <h1>Bienvenu(e)</h1>
         </div>  
         <div>
             <fieldset>
@@ -53,15 +53,15 @@ mysqli_close($con);
         </div>
         <div>
             <fieldset>
-                <legend>Password <span class="text_red" style="font-size: 13px;"></span></legend>
+                <legend>Mot de passe <span class="text_red" style="font-size: 13px;"></span></legend>
                 <input type="password" name="password" id="password" required maxlength="14">
             </fieldset>
         </div>
         <div class="submit">
-            <button type="submit" id="login" name="login">Login</button>
+            <button type="submit" id="login" name="login">Se connectre</button>
         </div>
         <div class="submit-cont">
-            <p>You don't have an account? <a href="Signup.php">SignUp</a></p>
+            <p>Vous n'avez pas de compte ? <a href="Signup.php">S'inscrire</a></p>
         </div>
     </form>
     <script>
@@ -115,7 +115,7 @@ mysqli_close($con);
                 span.textContent = "";
                 ele.classList.remove('text_red');
                 ele.parentElement.classList.remove('error');
-                signUpForm.children[0].removeChild(h4);
+                LoginForm.children[0].removeChild(h4);
             })
         });
         //end check if inputs empty
