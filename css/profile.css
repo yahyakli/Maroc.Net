@@ -169,4 +169,13 @@ input{
             font-weight: bold;
         }
     }
+    button{
+        font-size: 10px;
+    }
+    input{
+        height: 25px;
+        width: 140px;
+        margin-top: 20px;
+        font-size: 12px;
+    }
 }

@@ -132,7 +132,6 @@
         let nc = 0;
         mnom.addEventListener("click", ()=>{
             if(nc === 0){
-                console.log("do it");
                 let input = document.createElement('input');
                 input.setAttribute("type", "text");
                 input.setAttribute("placeholder", "Entrez le nouveau nom");
@@ -161,13 +160,11 @@
         let ac = 0;
         mage.addEventListener("click", ()=>{
             if(ac === 0){
-                console.log("do it");
                 let input = document.createElement('input');
                 input.setAttribute("type", "text");
                 input.setAttribute("placeholder", "Entrez le nouveau age");
                 input.setAttribute("name", "age");
                 input.setAttribute("id", "age");
-                input.style = "width:250px; margin-right:5px;margin-top:10px;font-size:20px;height:40px;box-sizing:border-box; padding-left:10px;"
                 let cage = document.getElementById("cage");
                 let fparent = cage.parentElement;
                 let first = fparent.parentElement.firstChild;
@@ -191,13 +188,11 @@
         let sc = 0;
         msexe.addEventListener("click", ()=>{
             if(sc === 0){
-                console.log("do it");
                 let input = document.createElement('input');
                 input.setAttribute("type", "text");
                 input.setAttribute("placeholder", "Entrez le nouveau sexe");
                 input.setAttribute("name", "sexe");
                 input.setAttribute("id", "sexe");
-                input.style = "width:250px; margin-right:5px;margin-top:10px;font-size:20px;height:40px;box-sizing:border-box; padding-left:10px;"
                 let csexe = document.getElementById("csexe");
                 let fparent = csexe.parentElement;
                 let first = fparent.parentElement.firstChild;
@@ -221,13 +216,11 @@
         let pc = 0;
         pays.addEventListener("click", ()=>{
             if(pc === 0){
-                console.log("do it");
                 let input = document.createElement('input');
                 input.setAttribute("type", "text");
                 input.setAttribute("placeholder", "Entrez le nouveau pays");
                 input.setAttribute("name", "pays");
                 input.setAttribute("id", "pays");
-                input.style = "width:250px; margin-right:5px;margin-top:10px;font-size:20px;height:40px;box-sizing:border-box; padding-left:10px;"
                 let cays = document.getElementById("cays");
                 let fparent = cays.parentElement;
                 let first = fparent.parentElement.firstChild;
