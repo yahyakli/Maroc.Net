@@ -123,7 +123,7 @@ if(isset($_POST['submit'])){
                     ele.parentElement.classList.add('error');
                 }
             })
-            ele.addEventListener('focus', ()=>{
+            ele.addEventListener("input", ()=>{
                 let field = ele.parentElement;
                 let legend = field.children[0];
                 let span = legend.children[0];

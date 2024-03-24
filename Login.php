@@ -108,7 +108,7 @@ mysqli_close($con);
                     ele.parentElement.classList.add('error');
                 }
             })
-            ele.addEventListener('focus', ()=>{
+            ele.addEventListener('input', ()=>{
                 let field = ele.parentElement;
                 let legend = field.children[0];
                 let span = legend.children[0];
@@ -116,6 +116,7 @@ mysqli_close($con);
                 ele.classList.remove('text_red');
                 ele.parentElement.classList.remove('error');
                 LoginForm.children[0].removeChild(h4);
+                checkIt = false;
             })
         });
         //end check if inputs empty

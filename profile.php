@@ -72,7 +72,7 @@
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container mb-5">
         <div class="row">
             <div class="col-lg-6 col-sm-12">
                 <table>
@@ -161,7 +161,7 @@
         mage.addEventListener("click", ()=>{
             if(ac === 0){
                 let input = document.createElement('input');
-                input.setAttribute("type", "text");
+                input.setAttribute("type", "number");
                 input.setAttribute("placeholder", "Entrez le nouveau age");
                 input.setAttribute("name", "age");
                 input.setAttribute("id", "age");
@@ -238,6 +238,15 @@
                 pc = 0;
             }
         })
+        ///////////////////////////////////////////////
+        ///////////////////////////////////////////////
+        let mp_change = document.getElementById("mp-change");
+        let mp = document.querySelectorAll(".mp");
+        mp_change.addEventListener("click" , ()=>{
+            mp.forEach(ele => {
+                ele.classList.remove("hide");
+            });
+        });
         ///////////////////////////////////////////////
     </script>
 </body>
