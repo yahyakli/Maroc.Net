@@ -48,7 +48,7 @@ mysqli_close($con);
         <div>
             <fieldset>
                 <legend>Email <span class="text_red" style="font-size: 13px;"></span></legend>
-                <input type="email" name="email" id="email" required maxlength="35">
+                <input type="text" name="email" id="email" required maxlength="35">
             </fieldset>
         </div>
         <div>
@@ -80,7 +80,7 @@ mysqli_close($con);
                 EmailInput.parentElement.classList.add('error');
             }
         })
-        //end check email
+        // end check email
         //start check password
         let passwordRegex = /^.{8,14}$/;;
         let passwordInput = document.getElementById('password');
