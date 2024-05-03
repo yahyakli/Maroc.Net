@@ -5,21 +5,20 @@
     --mist:#b8c0c0;
     --dark:#19283f
 }
-.cartA{
-    h2{
-        background-color: var(--primary);
-        color: var(--secondary);
-        padding: 5px 10px;
-        margin-bottom: 15px;
-        font-weight: 700;
-        border-radius: 5px;
-    }
-    h3{
-        margin-top: 40px;
-        box-sizing: border-box;
-        padding-right: 80px;
-        overflow-x: hidden;
-    }
+.cartA h3{
+    margin-top: 40px;
+    box-sizing: border-box;
+    padding-right: 80px;
+    overflow-x: hidden;
+
+}
+.cartA h2{
+    background-color: var(--primary);
+    color: var(--secondary);
+    padding: 5px 10px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    border-radius: 5px;
 }
 .hide{
     display: none;

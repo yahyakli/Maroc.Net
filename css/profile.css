@@ -31,10 +31,10 @@ body{
     margin-top: 10px;
     height: 250px;
     background-color: black;
-    img{
-        width: 100%;
-        height: 100%;
-    }
+}
+.banner img{
+    width: 100%;
+    height: 100%;
 }
 .info{
     height: 100px;
@@ -45,20 +45,20 @@ body{
     display: flex;
     align-items: center;
     justify-content: right;
-    img{
-        position: absolute;
-        height: 140px;
-        border-radius: 50%;
-        outline: 3px solid var(--mist);
-        left: 40px;
-        top: -50px;
-    }
-    div{
-        width: 80%;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-    }
+}
+.info div{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.info img{
+    position: absolute;
+    height: 140px;
+    border-radius: 50%;
+    outline: 3px solid var(--mist);
+    left: 40px;
+    top: -50px;
 }
 table{
     margin: 20px 0;
@@ -135,19 +135,19 @@ input{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        img{
-            position: relative !important;
-            left: 0;
-            top: -50px;
-        }
-        div{
-            position: relative;
-            top: -40px;
-            justify-content: space-between;
-            h4{
-                font-size: 20px;
-            }
-        }
+    }
+    .info img{
+        position: relative !important;
+        left: 0;
+        top: -50px;
+    }
+    .info div{
+        position: relative;
+        top: -40px;
+        justify-content: space-between;
+    }
+    .info div h4{
+        font-size: 20px;
     }
     button{
         font-size: 16px;
@@ -164,10 +164,10 @@ input{
     .info div{
         display: block;
         padding-bottom:15px ;
-        h4{
-            font-size: 16px;
-            font-weight: bold;
-        }
+    }
+    .info div h4{
+        font-size: 16px;
+        font-weight: bold;
     }
     button{
         font-size: 10px;
@@ -184,24 +184,24 @@ input{
     justify-content: space-between;
     width: 100%;
     align-items: start;
-    button{
-        background-color: #333;
-        height: fit-content;
-        font-weight: bold;
-        color: white;
-        padding: 10px 20px;
-        margin-left: 15px;
-        border: none;
-        transition: 0.3s ease;
-        &:hover{
-            color: black;
-            background-color:var(--secondary);
-        }
-    }
-    div{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-direction: column;
-    }
+}
+.tbl_mp div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.tbl_mp button{
+    background-color: #333;
+    height: fit-content;
+    font-weight: bold;
+    color: white;
+    padding: 10px 20px;
+    margin-left: 15px;
+    border: none;
+    transition: 0.3s ease;
+}
+.tbl_mp button:hover{
+    color: black;
+    background-color:var(--secondary);
 }
